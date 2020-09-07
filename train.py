@@ -11,7 +11,6 @@ from models import model_factory
 from optimizer.optimizer_helper import get_optim_and_scheduler
 from utils.Logger import Logger
 import numpy as np
-
 from models.resnet import resnet18, resnet50
 
 

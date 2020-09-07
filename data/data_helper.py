@@ -66,13 +66,13 @@ def get_train_dataloader(args, patches):
         name_val, labels_val = _dataset_info(join(dirname(__file__), 'correct_txt_lists', '%s_crossval_kfold.txt' % dname))
 
         train_dataset = JigsawNewDataset(name_train, labels_train, patches=patches, img_transformer=img_transformer,
-                                      tile_transformer=tile_transformer, jig_classes=args.jigsaw_n_classes, bias_whole_image=args.bias_whole_image)
+                                      tile_transformer=tile_transformer, jig_classes=30, bias_whole_image=args.bias_whole_image)
         if limit:
             train_dataset = Subset(train_dataset, limit)
         datasets.append(train_dataset)
         val_datasets.append(
             JigsawTestNewDataset(name_val, labels_val, img_transformer=get_val_transformer(args),
-                              patches=patches, jig_classes=args.jigsaw_n_classes))
+                              patches=patches, jig_classes=30))
     dataset = ConcatDataset(datasets)
     val_dataset = ConcatDataset(val_datasets)
     loader = torch.utils.data.DataLoader(dataset, batch_size=args.batch_size, shuffle=True, num_workers=4, pin_memory=True, drop_last=True)
@@ -83,7 +83,7 @@ def get_train_dataloader(args, patches):
 def get_val_dataloader(args, patches=False):
     names, labels = _dataset_info(join(dirname(__file__), 'correct_txt_lists', '%s_test_kfold.txt' % args.target))
     img_tr = get_val_transformer(args)
-    val_dataset = JigsawTestNewDataset(names, labels, patches=patches, img_transformer=img_tr, jig_classes=args.jigsaw_n_classes)
+    val_dataset = JigsawTestNewDataset(names, labels, patches=patches, img_transformer=img_tr, jig_classes=30)
     if args.limit_target and len(val_dataset) > args.limit_target:
         val_dataset = Subset(val_dataset, args.limit_target)
         print("Using %d subset of val dataset" % args.limit_target)
