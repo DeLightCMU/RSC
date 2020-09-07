@@ -20,7 +20,7 @@ class Logger():
         log_path = join(_log_path, folder, logname)
         if args.tf_logger:
             self.tf_logger = TFLogger(log_path)
-            print("Saving to %s" % log_path)
+            # print("Saving to %s" % log_path)
         else:
             self.tf_logger = None
         self.current_iter = 0
@@ -72,7 +72,7 @@ class Logger():
         if args.folder_name:
             folder_name = join(args.folder_name, folder_name)
         name = "eps%d_bs%d_lr%g_class%d_jigClass%d_jigWeight%g" % (args.epochs, args.batch_size, args.learning_rate, args.n_classes,
-                                                                   args.jigsaw_n_classes, args.jig_weight)
+                                                                   30, 0.7)
         # if args.ooo_weight > 0:
         #     name += "_oooW%g" % args.ooo_weight
         if args.train_all:

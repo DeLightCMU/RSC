@@ -10,7 +10,7 @@ import torch.nn.functional as F
 import random
 
 class ResNet(nn.Module):
-    def __init__(self, block, layers, jigsaw_classes=1000, classes=100, domains=3):
+    def __init__(self, block, layers, jigsaw_classes=1000, classes=100):
         self.inplanes = 64
         super(ResNet, self).__init__()
         self.conv1 = nn.Conv2d(3, 64, kernel_size=7, stride=2, padding=3,
@@ -54,7 +54,7 @@ class ResNet(nn.Module):
     def is_patch_based(self):
         return False
 
-    def forward(self, x, gt=None, flag=None):
+    def forward(self, x, gt=None, flag=None, epoch=None):
         x = self.conv1(x)
         x = self.bn1(x)
         x = self.relu(x)
@@ -71,7 +71,6 @@ class ResNet(nn.Module):
             x_new = Variable(x_new.data, requires_grad=True)
             x_new_view = self.avgpool(x_new)
             x_new_view = x_new_view.view(x_new_view.size(0), -1)
-            # x_new_view = self.classifier(x_new_view)
             output = self.class_classifier(x_new_view)
             class_num = output.shape[1]
             index = gt
@@ -100,7 +99,7 @@ class ResNet(nn.Module):
             choose_one = random.randint(0, 9)
             if choose_one <= 4:
                 # ---------------------------- spatial -----------------------
-                spatial_drop_num = int(HW * 1/3)
+                spatial_drop_num = int(HW * 1/3.0)
                 th_mask_value = torch.sort(spatial_mean, dim=1, descending=True)[0][:, spatial_drop_num]
                 th_mask_value = th_mask_value.view(num_rois, 1).expand(num_rois, HW)
                 mask_all_cuda = torch.where(spatial_mean >= th_mask_value, torch.zeros(spatial_mean.shape).cuda(),
@@ -165,7 +164,7 @@ class ResNet(nn.Module):
             after_vector = torch.sum(one_hot_sparse * cls_prob_after, dim=1)
             change_vector = before_vector - after_vector - 0.0001
             change_vector = torch.where(change_vector > 0, change_vector, torch.zeros(change_vector.shape).cuda())
-            th_fg_value = torch.sort(change_vector, dim=0, descending=True)[0][int(round(float(num_rois) * 1/3))]
+            th_fg_value = torch.sort(change_vector, dim=0, descending=True)[0][int(round(float(num_rois) * 1/3.0))]
             drop_index_fg = change_vector.gt(th_fg_value)
             ignore_index_fg = 1 - drop_index_fg
             not_01_ignore_index_fg = ignore_index_fg.nonzero()[:, 0]

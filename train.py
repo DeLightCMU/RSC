@@ -20,37 +20,29 @@ def get_args():
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--source", choices=available_datasets, help="Source", nargs='+')
     parser.add_argument("--target", choices=available_datasets, help="Target")
-    parser.add_argument("--batch_size", "-b", type=int, default=128, help="Batch size")  # 128
+    parser.add_argument("--batch_size", "-b", type=int, default=128, help="Batch size")
     parser.add_argument("--image_size", type=int, default=222, help="Image size")
     # data aug stuff
     parser.add_argument("--min_scale", default=0.8, type=float, help="Minimum scale percent")
     parser.add_argument("--max_scale", default=1.0, type=float, help="Maximum scale percent")
     parser.add_argument("--random_horiz_flip", default=0.5, type=float, help="Chance of random horizontal flip")
     parser.add_argument("--jitter", default=0.4, type=float, help="Color jitter amount")
-    parser.add_argument("--tile_random_grayscale", default=0.1, type=float,
-                        help="Chance of randomly greyscaling a tile")
+    parser.add_argument("--tile_random_grayscale", default=0.1, type=float, help="Chance of randomly greyscaling a tile")
     #
     parser.add_argument("--limit_source", default=None, type=int,
                         help="If set, it will limit the number of training samples")
     parser.add_argument("--limit_target", default=None, type=int,
                         help="If set, it will limit the number of testing samples")
-
-    parser.add_argument("--learning_rate", "-l", type=float, default=.006, help="Learning rate")
+    parser.add_argument("--learning_rate", "-l", type=float, default=.008, help="Learning rate")
     parser.add_argument("--epochs", "-e", type=int, default=30, help="Number of epochs")
     parser.add_argument("--n_classes", "-c", type=int, default=7, help="Number of classes")
-    parser.add_argument("--jigsaw_n_classes", "-jc", type=int, default=30, help="Number of classes for the jigsaw task")
-    parser.add_argument("--network", choices=model_factory.nets_map.keys(), help="Which network to use",
-                        default="caffenet")
-    parser.add_argument("--jig_weight", type=float, default=0.7, help="Weight for the jigsaw puzzle")
-    parser.add_argument("--ooo_weight", type=float, default=0, help="Weight for odd one out task")
+    parser.add_argument("--network", choices=model_factory.nets_map.keys(), help="Which network to use", default="caffenet")
     parser.add_argument("--tf_logger", type=bool, default=True, help="If true will save tensorboard compatible logs")
     parser.add_argument("--val_size", type=float, default="0.1", help="Validation size (between 0 and 1)")
     parser.add_argument("--folder_name", default='test', help="Used by the logger to save logs")
-    parser.add_argument("--bias_whole_image", default=0.9, type=float,
-                        help="If set, will bias the training procedure to show more often the whole image")
+    parser.add_argument("--bias_whole_image", default=0.9, type=float, help="If set, will bias the training procedure to show more often the whole image")
     parser.add_argument("--TTA", type=bool, default=False, help="Activate test time data augmentation")
-    parser.add_argument("--classify_only_sane", default=False, type=bool,
-                        help="If true, the network will only try to classify the non scrambled images")
+    parser.add_argument("--classify_only_sane", default=False, type=bool, help="If true, the network will only try to classify the non scrambled images")
     parser.add_argument("--train_all", default=True, type=bool, help="If true, all network weights will be trained")
     parser.add_argument("--suffix", default="", help="Suffix for the logger")
     parser.add_argument("--nesterov", default=False, type=bool, help="Use nesterov")
@@ -61,8 +53,7 @@ class Trainer:
     def __init__(self, args, device):
         self.args = args
         self.device = device
-
-        model = resnet18(pretrained=True, classes=args.n_classes)  # ------
+        model = resnet18(pretrained=True, classes=args.n_classes)
         self.model = model.to(device)
         # print(self.model)
         self.source_loader, self.val_loader = data_helper.get_train_dataloader(args, patches=model.is_patch_based())
@@ -73,8 +64,6 @@ class Trainer:
         len(self.source_loader.dataset), len(self.val_loader.dataset), len(self.target_loader.dataset)))
         self.optimizer, self.scheduler = get_optim_and_scheduler(model, args.epochs, args.learning_rate, args.train_all,
                                                                  nesterov=args.nesterov)
-        self.jig_weight = args.jig_weight
-        self.only_non_scrambled = args.classify_only_sane
         self.n_classes = args.n_classes
         if args.target in args.source:
             self.target_id = args.source.index(args.target)
@@ -83,7 +72,7 @@ class Trainer:
         else:
             self.target_id = None
 
-    def _do_epoch(self):
+    def _do_epoch(self, epoch=None):
         criterion = nn.CrossEntropyLoss()
         self.model.train()
         for it, ((data, jig_l, class_l), d_idx) in enumerate(self.source_loader):
@@ -136,7 +125,7 @@ class Trainer:
         for self.current_epoch in range(self.args.epochs):
             self.scheduler.step()
             self.logger.new_epoch(self.scheduler.get_lr())
-            self._do_epoch()
+            self._do_epoch(self.current_epoch)
         val_res = self.results["val"]
         test_res = self.results["test"]
         idx_best = val_res.argmax()
@@ -157,7 +146,7 @@ def main():
     # args.source = ['photo', 'cartoon', 'sketch']
     # args.target = 'art_painting'
     # --------------------------------------------
-    print(args.target)
+    print("Target domain: {}".format(args.target))
     torch.manual_seed(0)
     torch.cuda.manual_seed(0)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
