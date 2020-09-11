@@ -133,7 +133,7 @@ class ResNet(nn.Module):
             change_vector = before_vector - after_vector - 1e-5
             change_vector = torch.where(change_vector > 0, change_vector, torch.zeros(change_vector.shape).cuda())
             th_fg_value = torch.sort(change_vector, dim=0, descending=True)[0][int(round(float(num_rois) * 1 / 3.0))]
-            drop_index_fg = change_vector.gt(th_fg_value)
+            drop_index_fg = change_vector.gt(th_fg_value).long()
             ignore_index_fg = 1 - drop_index_fg
             not_01_ignore_index_fg = ignore_index_fg.nonzero()[:, 0]
             mask_all[not_01_ignore_index_fg.long(), :] = 1

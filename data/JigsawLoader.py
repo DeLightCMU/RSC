@@ -174,7 +174,7 @@ class JigsawNewDataset(data.Dataset):
         self.labels = labels
 
         self.N = len(self.names)
-        self.permutations = self.__retrieve_permutations(jig_classes)
+        # self.permutations = self.__retrieve_permutations(jig_classes)
         self.grid_size = 3
         self.bias_whole_image = bias_whole_image
         if patches:
