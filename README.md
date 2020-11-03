@@ -1,9 +1,9 @@
-# Self-Challenging Improves Cross-Domain Generalization (In progress)
+# Self-Challenging Improves Cross-Domain Generalization
 This is the official implementation of: 
 
 Zeyi Huang*, Haohan Wang*, Eric P. Xing, and Dong Huang, Self-Challenging Improves Cross-Domain Generalization, ECCV, 2020 (Oral), [arxiv version](https://arxiv.org/abs/2007.02454).
 
-Updata: 
+Update: To mitigate fluctuation in different environments, we modify RSC in an curriculum manner. Also, we unify RSC for different network architectures. If you have any questions about the code, feel free to contact me or pull a issue.
 
 ### Citation: 
 
@@ -28,7 +28,7 @@ Updata:
 - GPU: RTX 2080
 
 ## Data Preparation
-Download PACS dataset from [here](http://www.eecs.qmul.ac.uk/~dl307/project_iccv2017). Once you have download the data, you must update the files in data/correct_txt_list to match the actual location of your files. Note: make sure you use the same train/val/test split.
+Download PACS dataset from [here](http://www.eecs.qmul.ac.uk/~dl307/project_iccv2017). Once you have download the data, you must update the files in data/correct_txt_list to match the actual location of your files. Note: make sure you use the same train/val/test split in PACS paper.
 
 ## Runing on PACS dataset
 Experiments with different source/target domains are listed in train.py(L145-152).
