@@ -1,7 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7158caf-0c56-496e-a495-7617efe4aa04" name="Default Changelist" comment="" />
+    <list default="true" id="f7158caf-0c56-496e-a495-7617efe4aa04" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/JigsawLoader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/StandardDataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/concat_dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/correct_txt_lists/art_painting_crossval_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/correct_txt_lists/art_painting_test_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/correct_txt_lists/art_painting_train_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/correct_txt_lists/cartoon_crossval_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/correct_txt_lists/cartoon_test_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/correct_txt_lists/cartoon_train_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/correct_txt_lists/photo_crossval_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/correct_txt_lists/photo_test_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/correct_txt_lists/photo_train_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/correct_txt_lists/sketch_crossval_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/correct_txt_lists/sketch_test_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/correct_txt_lists/sketch_train_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_helper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/CALTECH_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/CALTECH_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/LABELME_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/LABELME_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/PASCAL_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/PASCAL_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/SUN_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/SUN_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/amazon10_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/amazon10_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/amazon_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/amazon_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/art_pada_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/art_painting_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/art_painting_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/cartoon_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/cartoon_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/clipart_pada_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/dslr10_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/dslr10_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/dslr_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/dslr_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/jhuit_test_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/jhuit_train_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/mnist_m_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/mnist_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/photo_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/photo_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/product_pada_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/realworld_pada_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/sketch_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/sketch_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/svhn_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/synth_digits_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/usps_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/webcam10_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/webcam10_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/webcam_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/txt_lists/webcam_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/caffenet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model_factory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/resnet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/optimizer/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/optimizer/optimizer_helper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/Logger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/tf_logger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/vis.py" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,35 +85,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/train_DA_jigsaw.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="155" column="29" lean-forward="true" selection-start-line="155" selection-start-column="29" selection-end-line="155" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/resnet.py">
+        <entry file="file://$PROJECT_DIR$/Domain_Generalization/data/data_helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="128" column="76" lean-forward="true" selection-start-line="128" selection-start-column="76" selection-end-line="128" selection-end-column="76" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/data_helper.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+            <state relative-caret-position="216">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -50,10 +98,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/JigsawLoader.py">
+        <entry file="file://$PROJECT_DIR$/Domain_Generalization/data/JigsawLoader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1246">
-              <caret line="236" lean-forward="true" selection-start-line="236" selection-end-line="236" />
+            <state relative-caret-position="-3024">
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -62,10 +109,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/optimizer/optimizer_helper.py">
+        <entry file="file://$PROJECT_DIR$/Domain_Generalization/models/resnet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="1671">
+              <caret line="96" column="30" lean-forward="true" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Domain_Generalization/train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="127" column="59" selection-start-line="127" selection-start-column="57" selection-end-line="127" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,7 +139,12 @@
       <find>ResNet</find>
       <find>classify_only_sane</find>
       <find>tf_logger</find>
+      <find>cam</find>
+      <find>ia</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -85,9 +152,14 @@
         <option value="$PROJECT_DIR$/utils/tf_logger.py" />
         <option value="$PROJECT_DIR$/optimizer/optimizer_helper.py" />
         <option value="$PROJECT_DIR$/data/data_helper.py" />
+        <option value="$PROJECT_DIR$/train_DA_jigsaw.py" />
         <option value="$PROJECT_DIR$/data/JigsawLoader.py" />
         <option value="$PROJECT_DIR$/models/resnet.py" />
-        <option value="$PROJECT_DIR$/train_DA_jigsaw.py" />
+        <option value="$PROJECT_DIR$/train.py" />
+        <option value="$PROJECT_DIR$/Domain_Generalization/models/resnet.py" />
+        <option value="$PROJECT_DIR$/ImageNet/main.py" />
+        <option value="$PROJECT_DIR$/ImageNet/resnet.py" />
+        <option value="$PROJECT_DIR$/Domain_Generalization/train.py" />
       </list>
     </option>
   </component>
@@ -107,28 +179,30 @@
         <subPane>
           <expand>
             <path>
-              <item name="IADG_28c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IADG_28c" type="462c0819:PsiDirectoryNode" />
+              <item name="RSC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RSC" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="IADG_28c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IADG_28c" type="462c0819:PsiDirectoryNode" />
+              <item name="RSC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RSC" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain_Generalization" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RSC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RSC" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain_Generalization" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="IADG_28c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IADG_28c" type="462c0819:PsiDirectoryNode" />
+              <item name="RSC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RSC" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain_Generalization" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="IADG_28c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IADG_28c" type="462c0819:PsiDirectoryNode" />
-              <item name="optimizer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IADG_28c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IADG_28c" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="RSC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RSC" type="462c0819:PsiDirectoryNode" />
+              <item name="ImageNet" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -138,7 +212,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IADG_28b" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -198,17 +272,20 @@
       <workItem from="1573627369146" duration="5378000" />
       <workItem from="1590014448272" duration="20000" />
       <workItem from="1593676238404" duration="22760000" />
+      <workItem from="1604286770054" duration="4494000" />
+      <workItem from="1604368120356" duration="632000" />
+      <workItem from="1604369070993" duration="1402000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67306000" />
+    <option name="totallyTimeSpent" value="73834000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1985" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21337755" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22056384" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -220,7 +297,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="File Transfer" order="9" weight="0.17730497" />
+      <window_info anchor="bottom" id="File Transfer" order="9" visible="true" weight="0.17664975" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
@@ -241,26 +318,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/models/resnet.py</url>
-          <line>160</line>
+          <line>164</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/models/resnet.py</url>
-          <line>81</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/models/resnet.py</url>
-          <line>107</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/utils/vis.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/vis.py" />
     <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/-342624370/-1061658656/tokenize.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -268,114 +333,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/model_factory.py">
+    <entry file="file://$PROJECT_DIR$/models/model_factory.py" />
+    <entry file="file://$PROJECT_DIR$/models/model_utils.py" />
+    <entry file="file://$PROJECT_DIR$/models/patch_based.py" />
+    <entry file="file://$PROJECT_DIR$/models/resnet_gap.py" />
+    <entry file="file://$PROJECT_DIR$/utils/tf_logger.py" />
+    <entry file="file://$PROJECT_DIR$/utils/Logger.py" />
+    <entry file="file://$PROJECT_DIR$/data/concat_dataset.py" />
+    <entry file="file://$PROJECT_DIR$/data/StandardDataset.py" />
+    <entry file="file://$PROJECT_DIR$/train_DA_jigsaw.py" />
+    <entry file="file://$PROJECT_DIR$/optimizer/optimizer_helper.py" />
+    <entry file="file://$PROJECT_DIR$/data/JigsawLoader.py" />
+    <entry file="file://$PROJECT_DIR$/data/data_helper.py" />
+    <entry file="file://$PROJECT_DIR$/train.py" />
+    <entry file="file://$PROJECT_DIR$/models/resnet.py" />
+    <entry file="file://$PROJECT_DIR$/ImageNet/resnet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="360">
+          <caret line="27" column="82" selection-start-line="27" selection-start-column="82" selection-end-line="27" selection-end-column="82" />
           <folding>
-            <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/model_utils.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/patch_based.py">
+    <entry file="file://$PROJECT_DIR$/ImageNet/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="301">
+          <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/resnet_gap.py">
+    <entry file="file://$PROJECT_DIR$/Domain_Generalization/data/JigsawLoader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/tf_logger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
-          <folding>
-            <element signature="e#87#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/Logger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/concat_dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-320">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/StandardDataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/optimizer/optimizer_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/JigsawLoader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1246">
-          <caret line="236" lean-forward="true" selection-start-line="236" selection-end-line="236" />
+        <state relative-caret-position="-3024">
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/data_helper.py">
+    <entry file="file://$PROJECT_DIR$/Domain_Generalization/data/data_helper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+        <state relative-caret-position="216">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/resnet.py">
+    <entry file="file://$PROJECT_DIR$/Domain_Generalization/models/resnet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="128" column="76" lean-forward="true" selection-start-line="128" selection-start-column="76" selection-end-line="128" selection-end-column="76" />
+        <state relative-caret-position="1671">
+          <caret line="96" column="30" lean-forward="true" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train_DA_jigsaw.py">
+    <entry file="file://$PROJECT_DIR$/Domain_Generalization/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="155" column="29" lean-forward="true" selection-start-line="155" selection-start-column="29" selection-end-line="155" selection-end-column="29" />
+        <state relative-caret-position="199">
+          <caret line="127" column="59" selection-start-line="127" selection-start-column="57" selection-end-line="127" selection-end-column="59" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

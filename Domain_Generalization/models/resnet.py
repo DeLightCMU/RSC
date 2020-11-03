@@ -8,6 +8,7 @@ import numpy.random as npr
 import numpy as np
 import torch.nn.functional as F
 import random
+import math
 
 class ResNet(nn.Module):
     def __init__(self, block, layers, jigsaw_classes=1000, classes=100):
@@ -26,6 +27,7 @@ class ResNet(nn.Module):
         # self.jigsaw_classifier = nn.Linear(512 * block.expansion, jigsaw_classes)
         self.class_classifier = nn.Linear(512 * block.expansion, classes)
         #self.domain_classifier = nn.Linear(512 * block.expansion, domains)
+        self.pecent = 1/3
 
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
@@ -63,22 +65,25 @@ class ResNet(nn.Module):
         x = self.layer1(x)
         x = self.layer2(x)
         x = self.layer3(x)
+        x = self.layer4(x)
 
         if flag:
+            interval = 10
+            if epoch % interval == 0:
+                self.pecent = 3.0 / 10 + (epoch / interval) * 2.0 / 10
+
             self.eval()
             x_new = x.clone().detach()
-            x_new_3 = Variable(x_new.data, requires_grad=True)
-            x_new_4 = self.layer4(x_new_3)
-            x_new_4.retain_grad()
-            x_new_view = self.avgpool(x_new_4)
+            x_new = Variable(x_new.data, requires_grad=True)
+            x_new_view = self.avgpool(x_new)
             x_new_view = x_new_view.view(x_new_view.size(0), -1)
             output = self.class_classifier(x_new_view)
             class_num = output.shape[1]
             index = gt
-            num_rois = x_new_4.shape[0]
-            num_channel = x_new_4.shape[1]
-            H = x_new_4.shape[2]
-            HW = x_new_4.shape[2] * x_new_4.shape[3]
+            num_rois = x_new.shape[0]
+            num_channel = x_new.shape[1]
+            H = x_new.shape[2]
+            HW = x_new.shape[2] * x_new.shape[3]
             one_hot = torch.zeros((1), dtype=torch.float32).cuda()
             one_hot = Variable(one_hot, requires_grad=False)
             sp_i = torch.ones([2, num_rois]).long()
@@ -89,25 +94,27 @@ class ResNet(nn.Module):
             one_hot_sparse = Variable(one_hot_sparse, requires_grad=False)
             one_hot = torch.sum(output * one_hot_sparse)
             self.zero_grad()
-            one_hot.backward(retain_graph=True)
-            grad_channel_mean = torch.mean(x_new_4.grad.clone().detach().view(num_rois, num_channel, -1), dim=2)
+            one_hot.backward()
+            grads_val = x_new.grad.clone().detach()
+            grad_channel_mean = torch.mean(grads_val.view(num_rois, num_channel, -1), dim=2)
             channel_mean = grad_channel_mean
-            spatial_mean = F.interpolate(torch.mean(x_new_3.grad.clone().detach(), dim=1, keepdim=True), scale_factor=0.5)
-            spatial_mean = spatial_mean.squeeze().view(num_rois, HW)
+            grad_channel_mean = grad_channel_mean.view(num_rois, num_channel, 1, 1)
+            spatial_mean = torch.sum(x_new * grad_channel_mean, 1)
+            spatial_mean = spatial_mean.view(num_rois, HW)
             self.zero_grad()
 
             choose_one = random.randint(0, 9)
             if choose_one <= 4:
                 # ---------------------------- spatial -----------------------
-                spatial_drop_num = int(HW * 1 / 3.0)
-                th_mask_value = torch.sort(spatial_mean, dim=1, descending=True)[0][:, spatial_drop_num]
-                th_mask_value = th_mask_value.view(num_rois, 1).expand(num_rois, HW)
-                mask_all_cuda = torch.where(spatial_mean >= th_mask_value, torch.zeros(spatial_mean.shape).cuda(),
+                spatial_drop_num = math.ceil(HW * 1 / 3.0)
+                th18_mask_value = torch.sort(spatial_mean, dim=1, descending=True)[0][:, spatial_drop_num]
+                th18_mask_value = th18_mask_value.view(num_rois, 1).expand(num_rois, 49)
+                mask_all_cuda = torch.where(spatial_mean > th18_mask_value, torch.zeros(spatial_mean.shape).cuda(),
                                             torch.ones(spatial_mean.shape).cuda())
                 mask_all = mask_all_cuda.reshape(num_rois, H, H).view(num_rois, 1, H, H)
             else:
                 # -------------------------- channel ----------------------------
-                vector_thresh_percent = int(num_channel * 1 / 3.0)
+                vector_thresh_percent = math.ceil(num_channel * 1 / 3.2)
                 vector_thresh_value = torch.sort(channel_mean, dim=1, descending=True)[0][:, vector_thresh_percent]
                 vector_thresh_value = vector_thresh_value.view(num_rois, 1).expand(num_rois, num_channel)
                 vector = torch.where(channel_mean > vector_thresh_value,
@@ -117,7 +124,7 @@ class ResNet(nn.Module):
 
             # ----------------------------------- batch ----------------------------------------
             cls_prob_before = F.softmax(output, dim=1)
-            x_new_view_after = x_new_4 * mask_all
+            x_new_view_after = x_new * mask_all
             x_new_view_after = self.avgpool(x_new_view_after)
             x_new_view_after = x_new_view_after.view(x_new_view_after.size(0), -1)
             x_new_view_after = self.class_classifier(x_new_view_after)
@@ -130,9 +137,9 @@ class ResNet(nn.Module):
             one_hot_sparse = torch.sparse.FloatTensor(sp_i, sp_v, torch.Size([num_rois, class_num])).to_dense().cuda()
             before_vector = torch.sum(one_hot_sparse * cls_prob_before, dim=1)
             after_vector = torch.sum(one_hot_sparse * cls_prob_after, dim=1)
-            change_vector = before_vector - after_vector - 1e-5
+            change_vector = before_vector - after_vector - 0.0001
             change_vector = torch.where(change_vector > 0, change_vector, torch.zeros(change_vector.shape).cuda())
-            th_fg_value = torch.sort(change_vector, dim=0, descending=True)[0][int(round(float(num_rois) * 1 / 3.0))]
+            th_fg_value = torch.sort(change_vector, dim=0, descending=True)[0][int(round(float(num_rois) * self.pecent))]
             drop_index_fg = change_vector.gt(th_fg_value).long()
             ignore_index_fg = 1 - drop_index_fg
             not_01_ignore_index_fg = ignore_index_fg.nonzero()[:, 0]
@@ -140,10 +147,7 @@ class ResNet(nn.Module):
 
             self.train()
             mask_all = Variable(mask_all, requires_grad=True)
-            x = self.layer4(x)
             x = x * mask_all
-        else:
-            x = self.layer4(x)
 
         x = self.avgpool(x)
         x = x.view(x.size(0), -1)

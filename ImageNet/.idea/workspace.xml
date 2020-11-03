@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f93315e7-09fd-48f0-869e-e11c2a96412a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/JigsawLoader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/StandardDataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/concat_dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/correct_txt_lists/art_painting_crossval_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/correct_txt_lists/art_painting_test_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/correct_txt_lists/art_painting_train_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/correct_txt_lists/cartoon_crossval_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/correct_txt_lists/cartoon_test_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/correct_txt_lists/cartoon_train_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/correct_txt_lists/photo_crossval_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/correct_txt_lists/photo_test_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/correct_txt_lists/photo_train_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/correct_txt_lists/sketch_crossval_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/correct_txt_lists/sketch_test_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/correct_txt_lists/sketch_train_kfold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/data_helper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/CALTECH_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/CALTECH_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/LABELME_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/LABELME_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/PASCAL_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/PASCAL_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/SUN_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/SUN_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/amazon10_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/amazon10_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/amazon_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/amazon_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/art_pada_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/art_painting_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/art_painting_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/cartoon_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/cartoon_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/clipart_pada_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/dslr10_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/dslr10_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/dslr_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/dslr_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/jhuit_test_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/jhuit_train_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/mnist_m_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/mnist_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/photo_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/photo_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/product_pada_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/realworld_pada_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/sketch_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/sketch_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/svhn_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/synth_digits_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/usps_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/webcam10_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/webcam10_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/webcam_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/txt_lists/webcam_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../environment.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/caffenet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/model_factory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/model_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/resnet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optimizer/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optimizer/optimizer_helper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../train.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../utils/Logger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../utils/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../utils/tf_logger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../utils/vis.py" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="397" column="47" lean-forward="true" selection-start-line="397" selection-start-column="47" selection-end-line="397" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resnet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="249" column="51" selection-start-line="249" selection-start-column="51" selection-end-line="249" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ia</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/resnet.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1084" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ImageNet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageNet" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f93315e7-09fd-48f0-869e-e11c2a96412a" name="Default Changelist" comment="" />
+      <created>1604367759471</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604367759471</updated>
+      <workItem from="1604367760699" duration="352000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="352000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2498618" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Remote Host" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="397" column="47" lean-forward="true" selection-start-line="397" selection-start-column="47" selection-end-line="397" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="249" column="51" selection-start-line="249" selection-start-column="51" selection-end-line="249" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

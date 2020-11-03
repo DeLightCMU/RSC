@@ -19,7 +19,7 @@ def get_args():
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--source", choices=available_datasets, help="Source", nargs='+')
     parser.add_argument("--target", choices=available_datasets, help="Target")
-    parser.add_argument("--batch_size", "-b", type=int, default=128, help="Batch size")
+    parser.add_argument("--batch_size", "-b", type=int, default=64, help="Batch size")
     parser.add_argument("--image_size", type=int, default=222, help="Image size")
     # data aug stuff
     parser.add_argument("--min_scale", default=0.8, type=float, help="Minimum scale percent")
@@ -32,10 +32,10 @@ def get_args():
                         help="If set, it will limit the number of training samples")
     parser.add_argument("--limit_target", default=None, type=int,
                         help="If set, it will limit the number of testing samples")
-    parser.add_argument("--learning_rate", "-l", type=float, default=.008, help="Learning rate")
-    parser.add_argument("--epochs", "-e", type=int, default=30, help="Number of epochs")
+    parser.add_argument("--learning_rate", "-l", type=float, default=.01, help="Learning rate")
+    parser.add_argument("--epochs", "-e", type=int, default=20, help="Number of epochs")
     parser.add_argument("--n_classes", "-c", type=int, default=7, help="Number of classes")
-    parser.add_argument("--network", choices=model_factory.nets_map.keys(), help="Which network to use", default="caffenet")
+    parser.add_argument("--network", choices=model_factory.nets_map.keys(), help="Which network to use", default="resnet18")
     parser.add_argument("--tf_logger", type=bool, default=True, help="If true will save tensorboard compatible logs")
     parser.add_argument("--val_size", type=float, default="0.1", help="Validation size (between 0 and 1)")
     parser.add_argument("--folder_name", default='test', help="Used by the logger to save logs")
@@ -52,7 +52,12 @@ class Trainer:
     def __init__(self, args, device):
         self.args = args
         self.device = device
-        model = resnet18(pretrained=True, classes=args.n_classes)
+        if args.network == 'resnet18':
+            model = resnet18(pretrained=True, classes=args.n_classes)
+        elif args.network == 'resnet50':
+            model = resnet50(pretrained=True, classes=args.n_classes)
+        else:
+            model = resnet18(pretrained=True, classes=args.n_classes)
         self.model = model.to(device)
         # print(self.model)
         self.source_loader, self.val_loader = data_helper.get_train_dataloader(args, patches=model.is_patch_based())
@@ -75,13 +80,14 @@ class Trainer:
         criterion = nn.CrossEntropyLoss()
         self.model.train()
         for it, ((data, jig_l, class_l), d_idx) in enumerate(self.source_loader):
-            data, jig_l, class_l, d_idx = data.to(self.device), jig_l.to(self.device), class_l.to(
-                self.device), d_idx.to(self.device)
-
+            data, jig_l, class_l, d_idx = data.to(self.device), jig_l.to(self.device), class_l.to(self.device), d_idx.to(self.device)
             self.optimizer.zero_grad()
 
-            class_logit = self.model(data, class_l, True)
+            data_flip = torch.flip(data, (3,)).detach().clone()
+            data = torch.cat((data, data_flip))
+            class_l = torch.cat((class_l, class_l))
 
+            class_logit = self.model(data, class_l, True, epoch)
             class_loss = criterion(class_logit, class_l)
             _, cls_pred = class_logit.max(dim=1)
             loss = class_loss
