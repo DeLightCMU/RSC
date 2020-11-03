@@ -37,6 +37,8 @@ To train a ResNet18, simply run:
   python train.py --net resnet18
 ```
 
+## To Do
+Faster-RCNN
 
 ## Other pretrained models
 New ImageNet ResNet baselines training by RSC.
