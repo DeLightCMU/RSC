@@ -49,4 +49,4 @@ New ImageNet ResNet baselines training by RSC.
 
 
 ## Acknowledgement
-We borrowed code and data augmentation techniques from [Jigen](https://github.com/fmcarlucci/JigenDG).
+We borrowed code and data augmentation techniques from [Jigen](https://github.com/fmcarlucci/JigenDG), [ImageNet-pytorch](https://github.com/pytorch/examples/tree/master/imagenet).
