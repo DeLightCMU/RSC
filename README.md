@@ -3,7 +3,7 @@ This is the official implementation of:
 
 Zeyi Huang*, Haohan Wang*, Eric P. Xing, and Dong Huang, Self-Challenging Improves Cross-Domain Generalization, ECCV, 2020 (Oral), [arxiv version](https://arxiv.org/abs/2007.02454).
 
-Update: To mitigate fluctuation in different environments, we modify RSC in an curriculum manner. Also, we unify RSC for different network architectures. If you have any questions about the code, feel free to contact me or pull a issue.
+Update: To mitigate fluctuation in different environments, we modify RSC in a curriculum manner. Also, we unify RSC for different network architectures. If you have any questions about the code, feel free to contact me or pull a issue.
 
 ### Citation: 
 
