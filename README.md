@@ -1,7 +1,7 @@
 # Self-Challenging Improves Cross-Domain Generalization (In progress)
 This is the official implementation of: 
 
-Zeyi Huang, Haohan Wang, Eric P. Xing, and Dong Huang, Self-Challenging Improves Cross-Domain Generalization, ECCV, 2020 (Oral), [arxiv version](https://arxiv.org/abs/2007.02454).
+Zeyi Huang*, Haohan Wang*, Eric P. Xing, and Dong Huang, Self-Challenging Improves Cross-Domain Generalization, ECCV, 2020 (Oral), [arxiv version](https://arxiv.org/abs/2007.02454).
 
 ### Citation: 
 
@@ -26,7 +26,7 @@ Zeyi Huang, Haohan Wang, Eric P. Xing, and Dong Huang, Self-Challenging Improves
 - GPU: RTX 2080
 
 ## Data Preparation
-Download PACS dataset from [here](http://www.eecs.qmul.ac.uk/~dl307/project_iccv2017). Once you have download the data, you must update the files in data/txt_list to match the actual location of your files.
+Download PACS dataset from [here](http://www.eecs.qmul.ac.uk/~dl307/project_iccv2017). Once you have download the data, you must update the files in data/correct_txt_list to match the actual location of your files.
 
 ### Step-by-step installation
 
