@@ -37,6 +37,15 @@ To train a ResNet18, simply run:
   python train.py --net resnet18
 ```
 
+To test a ResNet18, you can download RSC model below and [logs](https://cmu.box.com/s/yvymx574mr9u76lhqfa01rynimy9tv1p):
+| Backbone        | Target Domain |Acc %            | models |
+| :--------------:| :-----------: | :------------:  |:------------: |
+| ResNet-18       |Photo          |95.99            |download   |
+| ResNet-18       |Sketch         |82.46            |download   |
+| ResNet-18       |Cartoon        |81.06            |download   |
+| ResNet-18       |Art            |84.47            |download   |
+
+
 ## To Do
 Faster-RCNN
 
