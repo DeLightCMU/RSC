@@ -32,6 +32,7 @@ Download PACS dataset from [here](http://www.eecs.qmul.ac.uk/~dl307/project_iccv
 
 ## Runing on PACS dataset
 Experiments with different source/target domains are listed in train.py(L145-152).
+
 To train a ResNet18, simply run:
 ```bash
   python train.py --net resnet18
@@ -40,10 +41,10 @@ To train a ResNet18, simply run:
 To test a ResNet18, you can download RSC model below and [logs](https://cmu.box.com/s/yvymx574mr9u76lhqfa01rynimy9tv1p):
 | Backbone        | Target Domain |Acc %            | models |
 | :--------------:| :-----------: | :------------:  |:------------: |
-| ResNet-18       |Photo          |95.99            |download   |
-| ResNet-18       |Sketch         |82.46            |download   |
-| ResNet-18       |Cartoon        |81.06            |download   |
-| ResNet-18       |Art            |84.47            |download   |
+| ResNet-18       |Photo          |96.05            |[download](https://cmu.box.com/s/hma6aw2ubcjyxpczhto6zortwf8ufin6)   |
+| ResNet-18       |Sketch         |82.67            |[download](https://cmu.box.com/s/hfhgwsciz2a6aeg8jhffgwt5yh3dvenq)   |
+| ResNet-18       |Cartoon        |81.61            |[download](https://cmu.box.com/s/9rw7z2gxdlq9fsa5sfamjfj1xwj95d54)   |
+| ResNet-18       |Art            |85.16            |[download](https://cmu.box.com/s/ixfrzmanpv9t0koutiuaax91a26ylgit)  |
 
 
 ## To Do
@@ -56,7 +57,6 @@ New ImageNet ResNet baselines training by RSC.
 | :--------------:| :--------------: | :------------:  |:------------:  |
 | ResNet-50       |77.18           |93.53            |[download](https://cmu.box.com/s/wpcy4mwkfm7gku3q4b115d5y1t69i4s4)   |
 | ResNet-101      |78.23           |94.16            |[download](https://cmu.box.com/s/wpcy4mwkfm7gku3q4b115d5y1t69i4s4)   |
-| ResNet-152      |78.89           |94.43            | download   |
 
 
 ## Acknowledgement
