@@ -3,7 +3,7 @@ This is the official implementation of:
 
 Zeyi Huang*, Haohan Wang*, Eric P. Xing, and Dong Huang, Self-Challenging Improves Cross-Domain Generalization, ECCV, 2020 (Oral), [arxiv version](https://arxiv.org/abs/2007.02454).
 
-**Notice** about DG task: In order to get the same results in the testing part, you should use the same environment configuration [here](https://github.com/DeLightCMU/RSC/blob/master/Domain_Generalization/env.txt), including software, hardware and random seed. When using a different environment configuration, similar to other repositories, you need to tune the parameters a little bit. According to my observations, a simple larger batch size and early stop can solve the problem. If you still can't solve the problem, don't panic! send me an email(zeyih(at)andrew(dot)cmu(dot)edu) with your environment. I'll help you out.
+**Notice** about DG task: In order to get the same results in the testing part, you should use the same environment configuration [here](https://github.com/DeLightCMU/RSC/blob/master/Domain_Generalization/env.txt), including software, hardware and random seed. When using a different environment configuration, similar to other DG repositories, you need to tune the parameters a little bit. According to my observations, a simple larger batch size and early stop can solve the problem. If you still can't solve the problem, don't panic! send me an email(zeyih(at)andrew(dot)cmu(dot)edu) with your environment. I'll help you out.
 
 **Update**: To mitigate fluctuation in different environments, we modify RSC in a curriculum manner. Also, we unify RSC for different network architectures. If you have any questions about the code, feel free to contact me or pull a issue.
 
