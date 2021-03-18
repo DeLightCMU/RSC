@@ -7,6 +7,10 @@ Zeyi Huang*, Haohan Wang*, Eric P. Xing, and Dong Huang, Self-Challenging Improv
 
 **Update**: To mitigate fluctuation in different environments, we modify RSC in a curriculum manner. Also, we unify RSC for different network architectures. If you have any questions about the code, feel free to contact me or pull a issue.
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-challenging-improves-cross-domain/domain-generalization-on-office-home)](https://paperswithcode.com/sota/domain-generalization-on-office-home?p=self-challenging-improves-cross-domain)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-challenging-improves-cross-domain/domain-generalization-on-pacs-2)](https://paperswithcode.com/sota/domain-generalization-on-pacs-2?p=self-challenging-improves-cross-domain)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-challenging-improves-cross-domain/domain-generalization-on-vlcs)](https://paperswithcode.com/sota/domain-generalization-on-vlcs?p=self-challenging-improves-cross-domain)
+
 ### Citation: 
 
 ```bash
