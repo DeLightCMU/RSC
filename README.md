@@ -1,12 +1,12 @@
 # Self-Challenging Improves Cross-Domain Generalization
 
+This is the official implementation of: 
+
+**Zeyi Huang*, Haohan Wang*, Eric P. Xing, and Dong Huang**, ***Self-Challenging Improves Cross-Domain Generalization***, **ECCV, 2020 (Oral)**, [arxiv version](https://arxiv.org/abs/2007.02454).
+
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-challenging-improves-cross-domain/domain-generalization-on-office-home)](https://paperswithcode.com/sota/domain-generalization-on-office-home?p=self-challenging-improves-cross-domain)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-challenging-improves-cross-domain/domain-generalization-on-pacs-2)](https://paperswithcode.com/sota/domain-generalization-on-pacs-2?p=self-challenging-improves-cross-domain)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-challenging-improves-cross-domain/domain-generalization-on-vlcs)](https://paperswithcode.com/sota/domain-generalization-on-vlcs?p=self-challenging-improves-cross-domain)
-
-This is the official implementation of: 
-
-Zeyi Huang*, Haohan Wang*, Eric P. Xing, and Dong Huang, Self-Challenging Improves Cross-Domain Generalization, ECCV, 2020 (Oral), [arxiv version](https://arxiv.org/abs/2007.02454).
 
 **Notice** about DG task: In order to get the same results in the testing part, you should use the same environment configuration [here](https://github.com/DeLightCMU/RSC/blob/master/Domain_Generalization/env.txt), including software, hardware and random seed. When using a different environment configuration, similar to other DG repositories, you need to tune the parameters a little bit. According to my observations, a simple larger batch size and early stop can solve the problem. If you still can't solve the problem, don't panic! send me an email(zeyih(at)andrew(dot)cmu(dot)edu) with your environment. I'll help you out.
 
